@@ -1,0 +1,2169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Words That Think · Tom Sawyer</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+<meta name="description" content="Master advanced vocabulary from Mark Twain's The Adventures of Tom Sawyer with bilingual English-Chinese definitions, original book quotes, and example sentences.">
+<meta name="theme-color" content="#06131a">
+<style>
+:root {
+  --bg:       #06131a;
+  --panel:    #0b1b24;
+  --panel2:   #0e2230;
+  --stroke:   #7ad0e0;
+  --text:     #e7fbff;
+  --muted:    #9fd6df;
+  --muted2:   #4a6e78;
+  --bad:      #ff5c7a;
+  --good:     #6ef7c8;
+  --gold:     #f0c040;
+  --gold2:    #ffe080;
+  --s35:      rgba(122,208,224,.35);
+  --s60:      rgba(122,208,224,.60);
+  --s20:      rgba(122,208,224,.20);
+  --o15:      rgba(0,0,0,.15);
+  --o25:      rgba(0,0,0,.25);
+  --panel-a:  rgba(11,27,36,.90);
+  --good15:   rgba(110,247,200,.15);
+  --good60:   rgba(110,247,200,.60);
+  --bad12:    rgba(255,92,122,.12);
+  --bad55:    rgba(255,92,122,.55);
+  --gold10:   rgba(240,192,64,.10);
+  --gold50:   rgba(240,192,64,.50);
+}
+*, *::before, *::after { box-sizing: border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: radial-gradient(900px 600px at 50% 0%, var(--panel2) 0%, var(--bg) 65%);
+  color: var(--text);
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+button { font-family: inherit; color: var(--text); cursor: pointer; }
+.wrapper { max-width: 680px; margin: 0 auto; padding: 0 14px; }
+.app-header {
+  text-align: center;
+  padding: 32px 10px 22px;
+  border-bottom: 1px solid var(--s20);
+}
+.app-header h1 {
+  font-family: Georgia, 'Times New Roman', 'Songti SC', serif;
+  font-size: clamp(2rem, 7vw, 2.8rem);
+  font-weight: 700;
+  color: var(--good);
+  letter-spacing: .01em;
+  text-shadow: 0 0 30px rgba(110,247,200,.25);
+  line-height: 1.15;
+}
+.app-header .tagline {
+  margin-top: 8px;
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  color: var(--muted);
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.app-header .book-credit {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: var(--muted2);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.header-star-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.header-badge {
+  background: var(--panel-a);
+  border: 1px solid var(--s35);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.header-badge:hover { background: rgba(122,208,224,.08); border-color: var(--s60); }
+.header-badge.active { background: var(--good15); border-color: var(--good60); color: var(--good); }
+.group-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  background: var(--panel);
+  border: 1px solid var(--s35);
+  border-radius: 16px;
+  padding: 10px 14px;
+}
+.group-nav-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+.group-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--muted2);
+  font-weight: 700;
+}
+.group-num {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--good);
+  letter-spacing: .02em;
+}
+.group-dots {
+  display: flex;
+  gap: 5px;
+  margin-top: 3px;
+}
+.group-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--muted2);
+  transition: background .2s, transform .2s;
+}
+.group-dot.active { background: var(--good); transform: scale(1.3); }
+.group-dot.done { background: var(--s60); }
+.nav-pill {
+  background: rgba(122,208,224,.08);
+  border: 1px solid var(--s35);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--muted);
+  transition: all .15s;
+  white-space: nowrap;
+}
+.nav-pill:hover:not(:disabled) { background: rgba(122,208,224,.15); border-color: var(--s60); color: var(--text); }
+.nav-pill:disabled { opacity: .35; pointer-events: none; }
+.word-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 0 2px;
+}
+.word-nav-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+}
+.word-counter {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+.word-counter span { color: var(--text); }
+.icon-btn {
+  background: rgba(122,208,224,.08);
+  border: 1px solid var(--s35);
+  border-radius: 50%;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  transition: all .15s;
+  color: var(--muted);
+}
+.icon-btn:hover { background: rgba(122,208,224,.15); border-color: var(--s60); color: var(--text); }
+.icon-btn.starred { color: var(--gold); border-color: var(--gold50); background: var(--gold10); }
+.icon-btn:disabled { opacity: .3; pointer-events: none; }
+.word-card {
+  margin-top: 10px;
+  background: linear-gradient(160deg, rgba(14,34,48,.85), rgba(11,27,36,.95));
+  border: 1px solid var(--s35);
+  border-radius: 22px;
+  overflow: hidden;
+  transition: border-color .2s;
+}
+.word-card-top {
+  padding: 20px 20px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid var(--s20);
+}
+.word-left { display: flex; flex-direction: column; gap: 4px; }
+.word-display {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(1.7rem, 6vw, 2.2rem);
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: .02em;
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(240,192,64,.2);
+}
+.pron-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pron-text {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: .03em;
+}
+.speak-btn {
+  background: var(--good15);
+  border: 1px solid var(--good60);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--good);
+  transition: all .15s;
+}
+.speak-btn:hover { background: rgba(110,247,200,.25); }
+.chapter-badge {
+  background: rgba(122,208,224,.08);
+  border: 1px solid var(--s35);
+  border-radius: 8px;
+  padding: 4px 9px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+.definition-block {
+  padding: 14px 20px 16px;
+  border-bottom: 1px solid var(--s20);
+}
+.def-en {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(231,251,255,.9);
+}
+.def-zh {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-top: 4px;
+  font-weight: 500;
+}
+.sentence-tab-row {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--s20);
+}
+.sent-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted2);
+  transition: all .15s;
+  text-align: center;
+}
+.sent-tab:hover { color: var(--muted); background: rgba(122,208,224,.04); }
+.sent-tab.active {
+  color: var(--good);
+  border-bottom-color: var(--good);
+  background: rgba(110,247,200,.04);
+}
+.sentence-content {
+  padding: 18px 20px 20px;
+}
+.sent-en {
+  font-family: Georgia, 'Times New Roman', 'Songti SC', serif;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  line-height: 1.85;
+  color: rgba(231,251,255,.88);
+  font-style: italic;
+}
+.sent-zh {
+  font-size: 0.88rem;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-top: 12px;
+  font-weight: 400;
+  padding-top: 12px;
+  border-top: 1px solid var(--s20);
+}
+.sent-en .hl {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--gold2);
+  background: rgba(240,192,64,.08);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+.sent-source {
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: var(--muted2);
+  text-align: right;
+  letter-spacing: .04em;
+}
+.quiz-phase-label {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  margin-bottom: 10px;
+}
+.quiz-section {
+  margin-top: 14px;
+  background: var(--panel);
+  border: 1px solid var(--s35);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.quiz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  cursor: pointer;
+  user-select: none;
+  transition: background .15s;
+}
+.quiz-header:hover { background: rgba(122,208,224,.05); }
+.quiz-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.quiz-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--text);
+}
+.quiz-subtitle {
+  font-size: 0.75rem;
+  color: var(--muted2);
+  margin-top: 1px;
+}
+.quiz-score-badge {
+  background: var(--good15);
+  border: 1px solid var(--good60);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--good);
+  display: none;
+}
+.quiz-toggle-icon { font-size: 0.85rem; color: var(--muted2); transition: transform .2s; }
+.quiz-toggle-icon.open { transform: rotate(180deg); }
+.quiz-body {
+  display: none;
+  padding: 0 18px 18px;
+  border-top: 1px solid var(--s20);
+}
+.quiz-body.open { display: block; }
+.quiz-progress-bar {
+  height: 4px;
+  background: rgba(122,208,224,.12);
+  border-radius: 999px;
+  margin: 14px 0 16px;
+  overflow: hidden;
+}
+.quiz-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--good), #4edfc9);
+  border-radius: 999px;
+  transition: width .3s ease;
+}
+.quiz-q-num {
+  font-size: 0.75rem;
+  color: var(--muted2);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 10px;
+}
+.quiz-sentence {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(0.88rem, 2.8vw, 0.96rem);
+  line-height: 1.8;
+  color: rgba(231,251,255,.9);
+  background: rgba(122,208,224,.05);
+  border: 1px solid var(--s20);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+.blank { color: var(--gold); font-style: normal; font-weight: 700; letter-spacing: .1em; }
+.quiz-choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.choice-btn {
+  background: rgba(122,208,224,.06);
+  border: 1px solid var(--s35);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  text-align: left;
+  transition: all .15s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.choice-btn:hover:not(:disabled) { background: rgba(122,208,224,.12); border-color: var(--s60); }
+.choice-btn .choice-label {
+  background: var(--s35);
+  border-radius: 4px;
+  width: 20px; height: 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+.choice-btn.correct { background: var(--good15); border-color: var(--good60); color: var(--good); }
+.choice-btn.wrong   { background: var(--bad12);  border-color: var(--bad55);  color: var(--bad); }
+.choice-btn:disabled { pointer-events: none; opacity: .7; }
+.quiz-feedback {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: none;
+}
+.quiz-feedback.correct-fb { background: var(--good15); color: var(--good); border: 1px solid var(--good60); }
+.quiz-feedback.wrong-fb   { background: var(--bad12);  color: var(--bad);  border: 1px solid var(--bad55); }
+.quiz-next-btn {
+  background: rgba(122,208,224,.1);
+  border: 1px solid var(--s60);
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text);
+  display: none;
+  transition: background .15s;
+}
+.quiz-next-btn:hover { background: rgba(122,208,224,.18); }
+.quiz-result {
+  display: none;
+  text-align: center;
+  padding: 16px 0 4px;
+}
+.quiz-result-score {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--good);
+  line-height: 1;
+}
+.quiz-result-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+.quiz-result-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.quiz-retry-btn {
+  background: var(--good15);
+  border: 1px solid var(--good60);
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--good);
+  transition: background .15s;
+}
+.quiz-retry-btn:hover { background: rgba(110,247,200,.25); }
+.quiz-start-area {
+  padding: 16px 0 4px;
+  text-align: center;
+}
+.quiz-start-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+.quiz-start-btn {
+  background: var(--good15);
+  border: 1px solid var(--good60);
+  border-radius: 999px;
+  padding: 10px 28px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--good);
+  transition: background .15s;
+}
+.quiz-start-btn:hover { background: rgba(110,247,200,.25); }
+.quiz-skip-btn {
+  background: none;
+  border: none;
+  color: var(--muted2);
+  font-size: 0.78rem;
+  margin-left: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.starred-section {
+  margin-top: 14px;
+  background: var(--panel);
+  border: 1px solid var(--s35);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.starred-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  cursor: pointer;
+  user-select: none;
+  transition: background .15s;
+}
+.starred-header:hover { background: rgba(240,192,64,.04); }
+.starred-header-left { display: flex; align-items: center; gap: 10px; }
+.starred-title { font-size: 0.9rem; font-weight: 800; color: var(--text); }
+.starred-count {
+  background: var(--gold10);
+  border: 1px solid var(--gold50);
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.starred-body { display: none; padding: 0 18px 18px; border-top: 1px solid var(--s20); }
+.starred-body.open { display: block; }
+.starred-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 14px;
+}
+.starred-chip {
+  background: var(--gold10);
+  border: 1px solid var(--gold50);
+  border-radius: 999px;
+  padding: 5px 13px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gold);
+  cursor: pointer;
+  transition: all .15s;
+}
+.starred-chip:hover { background: rgba(240,192,64,.18); }
+.starred-empty {
+  padding-top: 14px;
+  font-size: 0.85rem;
+  color: var(--muted2);
+  font-style: italic;
+  text-align: center;
+}
+.my-sentences-block {
+  padding: 16px 20px 18px;
+  border-top: 1px solid var(--s20);
+}
+.my-sent-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.my-sent-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: .02em;
+}
+.my-sent-counter {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted2);
+  background: var(--o25);
+  border: 1px solid var(--s20);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+.my-sent-counter.full { color: var(--gold); border-color: var(--gold50); background: var(--gold10); }
+.my-sent-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+.my-sent-input {
+  flex: 1;
+  background: rgba(122,208,224,.06);
+  border: 1px solid var(--s35);
+  border-radius: 12px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.88rem;
+  padding: 9px 13px;
+  outline: none;
+  transition: border-color .15s;
+  min-width: 0;
+}
+.my-sent-input:focus { border-color: var(--s60); background: rgba(122,208,224,.09); }
+.my-sent-input::placeholder { color: var(--muted2); }
+.my-sent-save-btn {
+  background: rgba(122,208,224,.1);
+  border: 1px solid var(--s60);
+  border-radius: 12px;
+  padding: 9px 16px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--stroke);
+  white-space: nowrap;
+  transition: background .15s;
+  flex-shrink: 0;
+}
+.my-sent-save-btn:hover { background: rgba(122,208,224,.2); }
+.my-sent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+}
+.my-sent-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: rgba(122,208,224,.05);
+  border: 1px solid var(--s20);
+  border-radius: 10px;
+  padding: 9px 12px;
+}
+.my-sent-num {
+  font-size: 0.68rem;
+  font-weight: 900;
+  color: var(--muted2);
+  background: var(--s20);
+  border-radius: 4px;
+  padding: 2px 6px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.my-sent-text {
+  flex: 1;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(231,251,255,.85);
+}
+.my-sent-del {
+  background: none;
+  border: none;
+  color: var(--muted2);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 3px;
+  flex-shrink: 0;
+  opacity: .6;
+  transition: color .15s, opacity .15s;
+}
+.my-sent-del:hover { color: var(--bad); opacity: 1; }
+.starred-quiz-divider {
+  height: 1px;
+  background: var(--s20);
+  margin: 14px 0;
+}
+.sq-start-area { text-align: center; padding-bottom: 4px; }
+.sq-desc {
+  font-size: 0.82rem;
+  color: var(--muted2);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.sq-unlock-hint {
+  font-size: 0.75rem;
+  color: var(--muted2);
+  font-style: italic;
+}
+footer {
+  margin-top: 36px;
+  padding: 20px 14px 28px;
+  border-top: 1px solid var(--s20);
+  text-align: center;
+}
+.footer-author {
+  font-size: 0.8rem;
+  color: var(--muted2);
+  line-height: 1.9;
+}
+.footer-author a { color: var(--muted); text-decoration: none; }
+.footer-author a:hover { color: var(--stroke); }
+.footer-quote {
+  margin-top: 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--muted2);
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+#toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(11,27,36,.96);
+  border: 1px solid var(--s60);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s, transform .2s;
+  white-space: nowrap;
+  z-index: 9999;
+}
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+#toast.gold { border-color: var(--gold50); color: var(--gold); }
+#toast.good { border-color: var(--good60); color: var(--good); }
+@media (max-width: 480px) {
+  .word-card-top { flex-wrap: wrap; }
+  .quiz-choices { grid-template-columns: 1fr; }
+  .group-dots { display: none; }
+  .nav-pill { padding: 7px 12px; font-size: 0.8rem; }
+}
+.synan-block {
+  padding: 10px 20px 14px;
+  border-bottom: 1px solid var(--s20);
+  display: flex; gap: 14px; flex-wrap: wrap;
+}
+.synan-group { flex: 1; min-width: 0; }
+.synan-label {
+  font-size: 0.65rem; font-weight: 900; text-transform: uppercase;
+  letter-spacing: .1em; margin-bottom: 5px;
+}
+.synan-label.syn { color: var(--good); }
+.synan-label.ant { color: var(--bad); }
+.synan-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.synan-chip {
+  font-size: 0.75rem; font-weight: 600; padding: 3px 9px;
+  border-radius: 999px;
+}
+.synan-chip.syn { background: rgba(110,247,200,.1); border: 1px solid rgba(110,247,200,.35); color: var(--good); }
+.synan-chip.ant { background: rgba(255,92,122,.08); border: 1px solid rgba(255,92,122,.3);  color: var(--bad); }
+.spell-content { padding: 18px 20px 22px; }
+.spell-sentence {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  line-height: 1.85;
+  color: rgba(231,251,255,.88);
+  margin-bottom: 18px;
+}
+.spell-sentence .hl { font-style: normal; font-weight: 700; color: var(--gold2); }
+.spell-boxes {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  justify-content: center; margin-bottom: 18px;
+}
+.spell-box {
+  width: 34px; height: 40px;
+  border: 2px solid var(--s35);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; font-weight: 800; text-transform: lowercase;
+  background: rgba(122,208,224,.05);
+  transition: border-color .15s, background .15s;
+  flex-shrink: 0;
+}
+.spell-box.filled   { border-color: var(--s60); background: rgba(122,208,224,.1); color: var(--text); }
+.spell-box.correct  { border-color: var(--good); background: rgba(110,247,200,.15); color: var(--good); }
+.spell-box.wrong    { border-color: var(--bad);  background: rgba(255,92,122,.12);  color: var(--bad); }
+.spell-box.cursor   { border-color: var(--gold); animation: spell-blink .9s ease infinite; }
+@keyframes spell-blink { 0%,100% { border-color: var(--gold); } 50% { border-color: transparent; } }
+.spell-input-row {
+  display: flex; gap: 8px; align-items: center; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.spell-input {
+  background: rgba(122,208,224,.06); border: 1px solid var(--s35);
+  border-radius: 12px; color: var(--text); font-family: inherit;
+  font-size: 1rem; font-weight: 700; padding: 9px 14px; outline: none;
+  width: 180px; text-align: center; letter-spacing: .12em;
+  transition: border-color .15s;
+}
+.spell-input:focus { border-color: var(--s60); }
+.spell-input::placeholder { color: var(--muted2); font-weight: 400; letter-spacing: 0; }
+.spell-check-btn {
+  background: var(--good15); border: 1px solid var(--good60);
+  border-radius: 12px; padding: 9px 18px;
+  font-size: .88rem; font-weight: 800; color: var(--good);
+  transition: background .15s;
+}
+.spell-check-btn:hover { background: rgba(110,247,200,.25); }
+.spell-reveal-btn {
+  background: none; border: none; color: var(--muted2);
+  font-size: .78rem; text-decoration: underline; cursor: pointer;
+  display: block; text-align: center; margin-top: 4px;
+}
+.spell-feedback {
+  text-align: center; font-size: .9rem; font-weight: 800;
+  padding: 10px; border-radius: 10px; margin-top: 4px; display: none;
+}
+.spell-feedback.ok  { background: var(--good15); color: var(--good); border: 1px solid var(--good60); }
+.spell-feedback.err { background: var(--bad12);  color: var(--bad);  border: 1px solid var(--bad55); }
+.spell-hint-row { text-align: center; margin-bottom: 10px; }
+.spell-hint-text { font-size: .78rem; color: var(--muted2); font-style: italic; }
+
+/* ── Print button ─────────────────────────────────────── */
+.print-btn { margin-left: 8px; }
+.header-star-row { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+/* ── Print styles ─────────────────────────────────────── */
+@media print {
+  body * { visibility: hidden; }
+  #printContainer, #printContainer * { visibility: visible; }
+  #printContainer { display: block !important; position: absolute; inset: 0; background: white; }
+}
+
+</style>
+</head>
+<body>
+
+<div id="toast"></div>
+
+<div class="wrapper">
+  <div class="app-header">
+    <h1>Words That Think: Tom Sawyer Edition</h1>
+    <div class="tagline">Master the language of childhood mischief and adventure.</div>
+    <div class="book-credit">257 words &middot; 257 sentences &middot; Mark Twain's The Adventures of Tom Sawyer</div>
+    <div class="header-star-row">
+      <button class="header-badge" id="starredToggleBtn">⭐ Starred Words (<span id="starredCountHeader">0</span>)</button>
+      <button class="header-badge print-btn" id="printBtn" onclick="openPrintModal()">🖨️ Print</button>
+    </div>
+  </div>
+
+  <div class="group-nav">
+    <button class="nav-pill" id="prevGroupBtn">← Prev</button>
+    <div class="group-nav-center">
+      <div class="group-label">Group</div>
+      <div class="group-num" id="groupNumDisplay">1 / 10</div>
+      <div class="group-dots" id="groupDots"></div>
+    </div>
+    <button class="nav-pill" id="nextGroupBtn">Next →</button>
+  </div>
+
+  <div class="word-nav">
+    <button class="nav-pill" id="prevWordBtn">←</button>
+    <div class="word-nav-center">
+      <div class="word-counter">Word <span id="wordNumDisplay">1</span> / <span id="groupSizeDisplay">10</span></div>
+      <button class="icon-btn" id="starBtn" title="Star this word">☆</button>
+      <button class="icon-btn" id="speakBtn" title="Hear pronunciation">🔊</button>
+    </div>
+    <button class="nav-pill" id="nextWordBtn">Next →</button>
+  </div>
+
+  <div class="word-card" id="wordCard">
+    <div class="word-card-top">
+      <div class="word-left">
+        <div class="word-display" id="wordDisplay">—</div>
+        <div class="pron-row">
+          <span class="pron-text" id="pronDisplay">—</span>
+          <button class="speak-btn" id="speakBtn2">🔊 Hear it</button>
+        </div>
+      </div>
+      <div class="chapter-badge" id="chapterBadge">—</div>
+    </div>
+
+    <div class="definition-block">
+      <div class="def-en" id="defEn">—</div>
+      <div class="def-zh" id="defZh">—</div>
+    </div>
+
+    <div class="synan-block" id="synanBlock">
+      <div class="synan-group">
+        <div class="synan-label syn">Synonyms</div>
+        <div class="synan-chips" id="synChips"></div>
+      </div>
+      <div class="synan-group">
+        <div class="synan-label ant">Antonyms</div>
+        <div class="synan-chips" id="antChips"></div>
+      </div>
+    </div>
+
+    <div class="sentence-tab-row">
+      <button class="sent-tab active" id="tabNovel">📖 From the Novel</button>
+      <button class="sent-tab" id="tabAI">💡 AI Example</button>
+      <button class="sent-tab" id="tabSpell">✏️ Spell It</button>
+    </div>
+
+    <div class="sentence-content" id="sentenceContent">
+      <div class="sent-en" id="sentEn">—</div>
+      <div class="sent-zh" id="sentZh">—</div>
+      <div class="sent-source" id="sentSource">—</div>
+    </div>
+
+    <div class="spell-content" id="spellContent" style="display:none;">
+      <div class="spell-hint-row"><span class="spell-hint-text" id="spellHint">Type the missing word from the AI example sentence.</span></div>
+      <div class="spell-sentence" id="spellSentence">—</div>
+      <div class="spell-boxes" id="spellBoxes"></div>
+      <div class="spell-input-row">
+        <input type="text" class="spell-input" id="spellInput"
+          placeholder="type the word…"
+          autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <button class="spell-check-btn" id="spellCheckBtn">Check</button>
+      </div>
+      <button class="spell-reveal-btn" id="spellRevealBtn">Show answer</button>
+      <div class="spell-feedback" id="spellFeedback"></div>
+    </div>
+
+    <div class="my-sentences-block">
+      <div class="my-sent-header">
+        <span class="my-sent-title">✍️ My Sentences</span>
+        <span class="my-sent-counter" id="mySentCounter">0 / 3</span>
+      </div>
+      <div class="my-sent-input-row">
+        <input type="text" class="my-sent-input" id="mySentInput"
+          placeholder="Write your own sentence using this word…"
+          autocomplete="off" autocorrect="off" spellcheck="false">
+        <button class="my-sent-save-btn" id="mySentSaveBtn">Save</button>
+      </div>
+      <div class="my-sent-list" id="mySentList"></div>
+    </div>
+  </div>
+
+  <div class="quiz-section" id="quizSection">
+    <div class="quiz-header" id="quizHeader">
+      <div class="quiz-header-left">
+        <div>
+          <div class="quiz-title">📝 Group Quiz</div>
+          <div class="quiz-subtitle" id="quizSubtitle">Part 1: Choose · Part 2: Spell</div>
+        </div>
+        <div class="quiz-score-badge" id="quizScoreBadge">—</div>
+      </div>
+      <div>
+        <span class="quiz-toggle-icon" id="quizToggleIcon">▾</span>
+      </div>
+    </div>
+    <div class="quiz-body" id="quizBody">
+      <div class="quiz-start-area" id="quizStartArea">
+        <div class="quiz-start-desc" id="quizStartDesc">Test yourself on Group 1. Fill in the blanks using words from this group.</div>
+        <button class="quiz-start-btn" id="quizStartBtn">Start Quiz</button>
+        <button class="quiz-skip-btn" id="quizSkipBtn">Skip</button>
+      </div>
+      <div id="quizQuestionArea" style="display:none;">
+        <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgressFill"></div></div>
+        <div class="quiz-q-num" id="quizQNum">Question 1 / 10</div>
+
+        <div id="quizPhase1">
+          <div class="quiz-phase-label">📖 Choose the word — Orwell's sentence</div>
+          <div class="quiz-sentence" id="quizSentence">—</div>
+          <div class="quiz-choices" id="quizChoices"></div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>
+
+        <div id="quizPhase2" style="display:none;">
+          <div class="quiz-phase-label">💡 Spell the word — AI example sentence</div>
+          <div class="quiz-sentence" id="qSpellSentence">—</div>
+          <div class="spell-boxes" id="qSpellBoxes"></div>
+          <div class="spell-input-row">
+            <input type="text" class="spell-input" id="qSpellInput"
+              placeholder="type the word…"
+              autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <button class="spell-check-btn" id="qSpellCheckBtn">Check</button>
+          </div>
+          <button class="spell-reveal-btn" id="qSpellRevealBtn">Show answer</button>
+          <div class="quiz-feedback" id="qSpellFeedback"></div>
+        </div>
+
+        <button class="quiz-next-btn" id="quizNextBtn" style="display:none;">Next →</button>
+      </div>
+      <div class="quiz-result" id="quizResult">
+        <div class="quiz-result-score" id="quizResultScore">—</div>
+        <div class="quiz-result-label" id="quizResultLabel">—</div>
+        <div class="quiz-result-btns">
+          <button class="quiz-retry-btn" id="quizRetryBtn">↻ Retry Quiz</button>
+          <button class="quiz-skip-btn" id="quizCloseBtn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="starred-section" id="starredSection">
+    <div class="starred-header" id="starredHeader">
+      <div class="starred-header-left">
+        <div class="starred-title">⭐ Starred Words</div>
+        <div class="starred-count" id="starredCount">0</div>
+      </div>
+      <span class="quiz-toggle-icon" id="starredToggleIcon">▾</span>
+    </div>
+    <div class="starred-body" id="starredBody">
+      <div class="starred-list" id="starredList"></div>
+
+      <div class="starred-quiz-wrap" id="starredQuizWrap">
+        <div class="starred-quiz-divider"></div>
+        <div class="sq-start-area" id="sqStartArea">
+          <div class="sq-desc" id="sqDesc">Star 5 or more words to unlock your personal quiz.</div>
+          <button class="quiz-start-btn" id="sqStartBtn" style="display:none;">⭐ Quiz My Starred Words</button>
+          <div class="sq-unlock-hint" id="sqUnlockHint">(<span id="sqStarredCount">0</span> / 5 starred so far)</div>
+        </div>
+        <div id="sqQuestionArea" style="display:none;">
+          <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="sqProgressFill"></div></div>
+          <div class="quiz-q-num" id="sqQNum">Question 1 / ?</div>
+          <div class="quiz-sentence" id="sqSentence">—</div>
+          <div class="quiz-choices" id="sqChoices"></div>
+          <div class="quiz-feedback" id="sqFeedback"></div>
+          <button class="quiz-next-btn" id="sqNextBtn">Next →</button>
+        </div>
+        <div class="quiz-result" id="sqResult" style="display:none;">
+          <div class="quiz-result-score" id="sqResultScore">—</div>
+          <div class="quiz-result-label" id="sqResultLabel">—</div>
+          <div class="quiz-result-btns">
+            <button class="quiz-retry-btn" id="sqRetryBtn">↻ Retry</button>
+            <button class="quiz-skip-btn" id="sqResetBtn">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-author">Created by Daniel Wang · Words from The Adventures of Tom Sawyer · For Educational Use · © 2026</div>
+    <div class="footer-quote">“Work consists of whatever a body is obliged to do, and Play consists of whatever a body is not obliged to do.”<br>— Tom Sawyer, The Adventures of Tom Sawyer</div>
+  </footer>
+</div>
+
+<script>
+// ============================================================
+// PASTE YOUR COMPLETE VOCAB ARRAY HERE (ALL 100 WORDS)
+// ============================================================
+// ============================================================
+const BOOK_CONFIG = {
+  "title": "Words That Think: Tom Sawyer Edition",
+  "bookName": "The Adventures of Tom Sawyer",
+  "author": "Mark Twain",
+  "year": "1876",
+  "tagline": "Master the language of childhood mischief and adventure."
+};
+
+
+// ============================================================
+// LOAD DATA FROM EXTERNAL FILE & REBUILD GROUPS (10 words each)
+// ============================================================
+let VOCAB = [];
+let SYNAN = {};
+let GROUPS = [];
+let NUM_GROUPS = 0;
+
+fetch('words-that-think-the-adventures-of-tom-sawyer-data.json')
+  .then(r => {
+    if (!r.ok) throw new Error('Cannot load words-that-think-the-adventures-of-tom-sawyer-data.json\nMake sure both files are in the same folder.');
+    return r.json();
+  })
+  .then(data => {
+    VOCAB = data.vocab || [];
+    SYNAN = data.synan || {};
+    console.log('Loaded', VOCAB.length, 'words');
+
+    // 🔁 Redefine buildGroups to use 10‑word chunks
+    buildGroups = function() {
+      const groups = [];
+      for (let i = 0; i < VOCAB.length; i += 10) {
+        groups.push(VOCAB.slice(i, i + 10));
+      }
+      return groups;
+    };
+    GROUPS = buildGroups();
+    NUM_GROUPS = GROUPS.length;
+
+    if (typeof render === 'function') render();
+  })
+  .catch(err => {
+    console.error(err);
+    if (document.getElementById('wordDisplay')) {
+      document.getElementById('wordDisplay').textContent = 'Error';
+      document.getElementById('defEn').textContent = err.message;
+    }
+  });
+// ============================================================
+// REST OF THE JAVASCRIPT (DO NOT MODIFY)
+// ============================================================
+const LS = {
+  get(key, fallback) {
+    try { const v = localStorage.getItem(key); return v !== null ? v : fallback; }
+    catch(e) { return fallback; }
+  },
+  set(key, val) {
+    try { localStorage.setItem(key, val); } catch(e) {}
+  }
+};
+
+function buildGroups() {
+  const n = VOCAB.length, g = 10;
+  const base = Math.floor(n / g);
+  const extra = n % g;
+  const groups = [];
+  let i = 0;
+  for (let k = 0; k < g; k++) {
+    const len = k < extra ? base + 1 : base;
+    groups.push(VOCAB.slice(i, i + len));
+    i += len;
+  }
+  return groups;
+}
+
+GROUPS = buildGroups();
+NUM_GROUPS = GROUPS.length;
+
+const S = {
+  gIdx: 0,
+  wIdx: 0,
+  sentTab: 0,
+  starred: new Set(JSON.parse(LS.get('wtb_starred', '[]'))),
+  sentences: JSON.parse(LS.get('wtb_sentences', '{}')),
+  quiz: null,
+  quizDone: {},
+  sqQuiz: null,
+};
+
+function saveStarred() { LS.set('wtb_starred', JSON.stringify([...S.starred])); }
+function saveSentences() { LS.set('wtb_sentences', JSON.stringify(S.sentences)); }
+
+function escReg(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+function highlightWord(text, word) {
+  const e = escReg(word);
+  const re1 = new RegExp('\\b(' + e + ')\\b', 'gi');
+  if (re1.test(text)) return text.replace(re1, '<span class="hl">$1</span>');
+  const root = escReg(word.substring(0, Math.max(4, Math.floor(word.length * 0.72))));
+  const re2 = new RegExp('\\b(' + root + '\\w*)\\b', 'gi');
+  return text.replace(re2, '<span class="hl">$1</span>');
+}
+
+function blankWord(text, word) {
+  const blank = '<span class="blank">___________</span>';
+  const e = escReg(word);
+  const re1 = new RegExp('\\b' + e + '\\b', 'gi');
+  if (re1.test(text)) return text.replace(re1, blank);
+  const root = escReg(word.substring(0, Math.max(4, Math.floor(word.length * 0.72))));
+  const re2 = new RegExp('\\b' + root + '\\w*\\b', 'gi');
+  return text.replace(re2, blank);
+}
+
+function chapterShort(ch) {
+  const m = ch.match(/Part ([IVX]+)[,\s]+Chapter (\d+)/i);
+  if (m) return 'Pt.' + m[1] + ' · Ch.' + m[2];
+  return ch;
+}
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+let toastTimer = null;
+function toast(msg, type = '') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'show' + (type ? ' ' + type : '');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.className = ''; }, 2200);
+}
+
+function speak(word) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(word);
+    u.lang = 'en-US'; u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
+
+function render() {
+  if (!GROUPS.length || !GROUPS[S.gIdx] || !GROUPS[S.gIdx][S.wIdx]) {
+    console.error('No data available');
+    return;
+  }
+  
+  const group = GROUPS[S.gIdx];
+  const entry = group[S.wIdx];
+  const isStarred = S.starred.has(entry.word);
+
+  document.getElementById('groupNumDisplay').textContent = (S.gIdx + 1) + ' / ' + NUM_GROUPS;
+  document.getElementById('prevGroupBtn').disabled = S.gIdx === 0;
+  document.getElementById('nextGroupBtn').disabled = S.gIdx === NUM_GROUPS - 1;
+  renderGroupDots();
+
+  document.getElementById('wordNumDisplay').textContent = S.wIdx + 1;
+  document.getElementById('groupSizeDisplay').textContent = group.length;
+  document.getElementById('prevWordBtn').disabled = S.wIdx === 0;
+  document.getElementById('nextWordBtn').disabled = S.wIdx === group.length - 1;
+
+  const sb = document.getElementById('starBtn');
+  sb.textContent = isStarred ? '★' : '☆';
+  sb.classList.toggle('starred', isStarred);
+
+  document.getElementById('wordDisplay').textContent = entry.word;
+  document.getElementById('pronDisplay').textContent = entry.pron;
+  document.getElementById('chapterBadge').textContent = chapterShort(entry.chapter);
+  document.getElementById('defEn').textContent = entry.def_en;
+  document.getElementById('defZh').textContent = entry.def_zh;
+
+  document.getElementById('tabNovel').classList.toggle('active', S.sentTab === 0);
+  document.getElementById('tabAI').classList.toggle('active', S.sentTab === 1);
+
+  let sentEn, sentZh, sentSource;
+  if (S.sentTab === 0) {
+    sentEn = highlightWord(entry.quote_en, entry.word);
+    sentZh = entry.quote_zh;
+    sentSource = '— ' + BOOK_CONFIG.author + ', <em>' + BOOK_CONFIG.bookName + '</em> · ' + entry.chapter;
+  } else {
+    sentEn = highlightWord(entry.ex_en, entry.word);
+    sentZh = entry.ex_zh;
+    sentSource = '— AI Example · Thematically aligned with <em>' + BOOK_CONFIG.bookName + '</em>';
+  }
+  document.getElementById('sentEn').innerHTML = sentEn;
+  document.getElementById('sentZh').textContent = sentZh;
+  document.getElementById('sentSource').innerHTML = sentSource;
+
+  const sa = SYNAN[entry.word] || { syn: [], ant: [] };
+  document.getElementById('synChips').innerHTML = sa.syn.map(w => `<span class="synan-chip syn">${w}</span>`).join('');
+  document.getElementById('antChips').innerHTML = sa.ant.map(w => `<span class="synan-chip ant">${w}</span>`).join('');
+  document.getElementById('synanBlock').style.display = (sa.syn.length || sa.ant.length) ? 'flex' : 'none';
+
+  document.getElementById('tabSpell').classList.toggle('active', S.sentTab === 2);
+  document.getElementById('spellContent').style.display = S.sentTab === 2 ? 'block' : 'none';
+  document.getElementById('sentenceContent').style.display = S.sentTab === 2 ? 'none' : 'block';
+  if (S.sentTab === 2) renderSpell();
+
+  renderStarredSection();
+  renderMySentences();
+
+  document.getElementById('quizStartDesc').textContent =
+    'Test yourself on Group ' + (S.gIdx + 1) + '. Choose the word, then spell it.';
+  const done = S.quizDone[S.gIdx];
+  const badge = document.getElementById('quizScoreBadge');
+  if (done !== undefined) {
+    badge.style.display = 'inline-block';
+    badge.textContent = done.score + ' / ' + done.total + ' correct';
+  } else {
+    badge.style.display = 'none';
+  }
+
+  const cnt = S.starred.size;
+  document.getElementById('starredCount').textContent = cnt;
+  document.getElementById('starredCountHeader').textContent = cnt;
+}
+
+function renderGroupDots() {
+  const wrap = document.getElementById('groupDots');
+  wrap.innerHTML = '';
+  for (let i = 0; i < NUM_GROUPS; i++) {
+    const d = document.createElement('div');
+    d.className = 'group-dot' +
+      (i === S.gIdx ? ' active' : '') +
+      (S.quizDone[i] !== undefined && i !== S.gIdx ? ' done' : '');
+    wrap.appendChild(d);
+  }
+}
+
+function renderStarredSection() {
+  const list = document.getElementById('starredList');
+  list.innerHTML = '';
+  if (S.starred.size === 0) {
+    list.innerHTML = '<div class="starred-empty">No starred words yet. Tap ☆ on any word to save it.</div>';
+  } else {
+    [...S.starred].forEach(word => {
+      const idx = VOCAB.findIndex(v => v.word === word);
+      if (idx === -1) return;
+      const chip = document.createElement('button');
+      chip.className = 'starred-chip';
+      chip.textContent = word;
+      chip.title = VOCAB[idx].def_en;
+      chip.addEventListener('click', () => navigateToWord(idx));
+      list.appendChild(chip);
+    });
+  }
+  renderStarredQuizStart();
+}
+
+function renderMySentences() {
+  const word = GROUPS[S.gIdx][S.wIdx].word;
+  const sents = S.sentences[word] || [];
+  const max = 3;
+
+  const counter = document.getElementById('mySentCounter');
+  counter.textContent = sents.length + ' / ' + max;
+  counter.className = 'my-sent-counter' + (sents.length >= max ? ' full' : '');
+
+  const input = document.getElementById('mySentInput');
+  const saveBtn = document.getElementById('mySentSaveBtn');
+  input.disabled = sents.length >= max;
+  saveBtn.disabled = sents.length >= max;
+  input.placeholder = sents.length >= max
+    ? 'Maximum 3 sentences saved ✓'
+    : 'Write your own sentence using "' + word + '"…';
+
+  const list = document.getElementById('mySentList');
+  list.innerHTML = '';
+  sents.forEach((text, i) => {
+    const item = document.createElement('div');
+    item.className = 'my-sent-item';
+    item.innerHTML =
+      '<span class="my-sent-num">' + (i + 1) + '</span>' +
+      '<span class="my-sent-text">' + escapeHTML(text) + '</span>' +
+      '<button class="my-sent-del" data-idx="' + i + '" title="Delete">✕</button>';
+    item.querySelector('.my-sent-del').addEventListener('click', () => deleteSentence(word, i));
+    list.appendChild(item);
+  });
+}
+
+function escapeHTML(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function addSentence() {
+  const word = GROUPS[S.gIdx][S.wIdx].word;
+  const input = document.getElementById('mySentInput');
+  const text = input.value.trim();
+  if (!text) { toast('Please write a sentence first.', ''); return; }
+  if (!S.sentences[word]) S.sentences[word] = [];
+  if (S.sentences[word].length >= 3) { toast('Max 3 sentences per word.', ''); return; }
+  const wordLower = word.toLowerCase();
+  const rootLower = wordLower.substring(0, Math.max(4, Math.floor(wordLower.length * 0.72)));
+  if (!text.toLowerCase().includes(rootLower)) {
+    toast('💡 Try to use "' + word + '" in your sentence!', '');
+  }
+  S.sentences[word].push(text);
+  saveSentences();
+  input.value = '';
+  renderMySentences();
+  toast('✓ Sentence saved!', 'good');
+}
+
+function deleteSentence(word, idx) {
+  if (!S.sentences[word]) return;
+  S.sentences[word].splice(idx, 1);
+  if (S.sentences[word].length === 0) delete S.sentences[word];
+  saveSentences();
+  renderMySentences();
+}
+
+function renderStarredQuizStart() {
+  const count = S.starred.size;
+  const canStart = count >= 5;
+  document.getElementById('sqDesc').textContent = canStart
+    ? 'Quiz yourself on all ' + count + ' starred words.'
+    : 'Keep starring words to unlock your personal quiz.';
+  document.getElementById('sqStartBtn').style.display = canStart ? 'inline-block' : 'none';
+  document.getElementById('sqUnlockHint').style.display = canStart ? 'none' : 'block';
+  document.getElementById('sqStarredCount').textContent = count;
+  document.getElementById('sqStartArea').style.display = 'block';
+  document.getElementById('sqQuestionArea').style.display = 'none';
+  document.getElementById('sqResult').style.display = 'none';
+}
+
+function startStarredQuiz() {
+  const starredWords = [...S.starred];
+  if (starredWords.length < 5) return;
+
+  const entries = starredWords
+    .map(w => VOCAB.find(v => v.word === w))
+    .filter(Boolean);
+
+  const questions = shuffle(entries);
+  S.sqQuiz = { questions, qIdx: 0, score: 0, answered: false };
+
+  document.getElementById('sqStartArea').style.display = 'none';
+  document.getElementById('sqQuestionArea').style.display = 'block';
+  document.getElementById('sqResult').style.display = 'none';
+  renderSQQuestion();
+}
+
+function renderSQQuestion() {
+  const q = S.sqQuiz;
+  const entry = q.questions[q.qIdx];
+  const total = q.questions.length;
+
+  document.getElementById('sqQNum').textContent = 'Question ' + (q.qIdx + 1) + ' / ' + total;
+  document.getElementById('sqProgressFill').style.width = ((q.qIdx / total) * 100) + '%';
+  document.getElementById('sqSentence').innerHTML = blankWord(entry.quote_en, entry.word);
+
+  const pool = [...S.starred].filter(w => w !== entry.word);
+  const starredDistractors = shuffle(pool).slice(0, 3);
+  const needed = 3 - starredDistractors.length;
+  let extra = [];
+  if (needed > 0) {
+    extra = shuffle(VOCAB.map(v => v.word).filter(w => w !== entry.word && !S.starred.has(w))).slice(0, needed);
+  }
+  const choices = shuffle([entry.word, ...starredDistractors, ...extra].slice(0, 4));
+
+  const labels = ['A', 'B', 'C', 'D'];
+  const container = document.getElementById('sqChoices');
+  container.innerHTML = '';
+  choices.forEach((word, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'choice-btn';
+    btn.innerHTML = '<span class="choice-label">' + labels[i] + '</span>' + word;
+    btn.dataset.word = word;
+    btn.addEventListener('click', () => checkSQAnswer(word, entry.word, entry.def_en));
+    container.appendChild(btn);
+  });
+
+  const fb = document.getElementById('sqFeedback');
+  fb.style.display = 'none';
+  fb.className = 'quiz-feedback';
+  document.getElementById('sqNextBtn').style.display = 'none';
+  q.answered = false;
+}
+
+function checkSQAnswer(chosen, correct, defHint) {
+  if (S.sqQuiz.answered) return;
+  S.sqQuiz.answered = true;
+
+  document.querySelectorAll('#sqChoices .choice-btn').forEach(btn => {
+    btn.disabled = true;
+    if (btn.dataset.word === correct) btn.classList.add('correct');
+    else if (btn.dataset.word === chosen && chosen !== correct) btn.classList.add('wrong');
+  });
+
+  const fb = document.getElementById('sqFeedback');
+  if (chosen === correct) {
+    S.sqQuiz.score++;
+    fb.className = 'quiz-feedback correct-fb';
+    fb.textContent = '✓ Correct! "' + correct + '" — ' + defHint.split(';')[0] + '.';
+  } else {
+    fb.className = 'quiz-feedback wrong-fb';
+    fb.textContent = '✗ The answer is "' + correct + '" — ' + defHint.split(';')[0] + '.';
+  }
+  fb.style.display = 'block';
+
+  const nextBtn = document.getElementById('sqNextBtn');
+  const isLast = S.sqQuiz.qIdx === S.sqQuiz.questions.length - 1;
+  nextBtn.textContent = isLast ? 'See Results →' : 'Next →';
+  nextBtn.style.display = 'inline-block';
+}
+
+function sqNext() {
+  const q = S.sqQuiz;
+  if (q.qIdx < q.questions.length - 1) {
+    q.qIdx++;
+    renderSQQuestion();
+  } else {
+    const total = q.questions.length;
+    const pct = Math.round((q.score / total) * 100);
+    const emoji = pct >= 80 ? '🎉' : pct >= 60 ? '👍' : '📚';
+    document.getElementById('sqQuestionArea').style.display = 'none';
+    document.getElementById('sqResult').style.display = 'block';
+    document.getElementById('sqProgressFill').style.width = '100%';
+    document.getElementById('sqResultScore').textContent = emoji + ' ' + q.score + ' / ' + total;
+    document.getElementById('sqResultLabel').textContent =
+      pct >= 80 ? 'Excellent — your starred words are solid!' :
+      pct >= 60 ? 'Good progress. Review the ones you missed.' :
+                  'Keep studying — revisit your starred words.';
+  }
+}
+
+function goGroup(idx) {
+  S.gIdx = Math.max(0, Math.min(NUM_GROUPS - 1, idx));
+  S.wIdx = 0;
+  S.sentTab = 0;
+  resetQuizUI();
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goWord(idx) {
+  const group = GROUPS[S.gIdx];
+  S.wIdx = Math.max(0, Math.min(group.length - 1, idx));
+  S.sentTab = 0;
+  render();
+}
+
+function navigateToWord(vocabIdx) {
+  let cumulative = 0;
+  for (let g = 0; g < NUM_GROUPS; g++) {
+    if (vocabIdx < cumulative + GROUPS[g].length) {
+      S.gIdx = g;
+      S.wIdx = vocabIdx - cumulative;
+      S.sentTab = 0;
+      resetQuizUI();
+      render();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    cumulative += GROUPS[g].length;
+  }
+}
+
+function toggleStar() {
+  const word = GROUPS[S.gIdx][S.wIdx].word;
+  if (S.starred.has(word)) {
+    S.starred.delete(word);
+    toast('Removed from starred', '');
+  } else {
+    S.starred.add(word);
+    toast('⭐ Starred: ' + word, 'gold');
+  }
+  saveStarred();
+  render();
+}
+
+function resetQuizUI() {
+  S.quiz = null;
+  document.getElementById('quizBody').classList.remove('open');
+  document.getElementById('quizToggleIcon').classList.remove('open');
+  document.getElementById('quizStartArea').style.display = 'block';
+  document.getElementById('quizQuestionArea').style.display = 'none';
+  document.getElementById('quizResult').style.display = 'none';
+}
+
+function startQuiz() {
+  const group = GROUPS[S.gIdx];
+  const questions = shuffle(group.map((entry, i) => ({ entry, groupIdx: i })));
+  S.quiz = {
+    questions,
+    qIdx: 0,
+    phase: 1,
+    score: 0,
+    spellScore: 0,
+    answered: false,
+  };
+  document.getElementById('quizStartArea').style.display = 'none';
+  document.getElementById('quizQuestionArea').style.display = 'block';
+  document.getElementById('quizResult').style.display = 'none';
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = S.quiz;
+  const { entry } = q.questions[q.qIdx];
+  const total = q.questions.length;
+  const step = q.qIdx * 2 + (q.phase - 1);
+  const totalSteps = total * 2;
+
+  document.getElementById('quizQNum').textContent =
+    'Word ' + (q.qIdx + 1) + ' / ' + total + ' · ' + (q.phase === 1 ? 'Part 1: Choose' : 'Part 2: Spell');
+  document.getElementById('quizProgressFill').style.width = ((step / totalSteps) * 100) + '%';
+
+  document.getElementById('quizNextBtn').style.display = 'none';
+
+  if (q.phase === 1) {
+    document.getElementById('quizPhase1').style.display = 'block';
+    document.getElementById('quizPhase2').style.display = 'none';
+
+    document.getElementById('quizSentence').innerHTML = blankWord(entry.quote_en, entry.word);
+
+    const group = GROUPS[S.gIdx];
+    const distractors = shuffle(group.map(w => w.word).filter(w => w !== entry.word)).slice(0, 3);
+    const choices = shuffle([entry.word, ...distractors]);
+    const labels = ['A', 'B', 'C', 'D'];
+    const container = document.getElementById('quizChoices');
+    container.innerHTML = '';
+    choices.forEach((word, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'choice-btn';
+      btn.innerHTML = '<span class="choice-label">' + labels[i] + '</span>' + word;
+      btn.dataset.word = word;
+      btn.addEventListener('click', () => checkAnswer(word, entry.word));
+      container.appendChild(btn);
+    });
+
+    const fb = document.getElementById('quizFeedback');
+    fb.style.display = 'none';
+    fb.className = 'quiz-feedback';
+    q.answered = false;
+
+  } else {
+    document.getElementById('quizPhase1').style.display = 'none';
+    document.getElementById('quizPhase2').style.display = 'block';
+    renderQuizSpell(entry);
+  }
+}
+
+function renderQuizSpell(entry) {
+  const word = entry.word.toLowerCase();
+  document.getElementById('qSpellSentence').innerHTML = highlightWord(entry.ex_en, entry.word)
+    .replace(/<span class="hl">([^<]+)<\/span>/gi, '<span class="hl">_____<\/span>');
+
+  const boxes = document.getElementById('qSpellBoxes');
+  boxes.innerHTML = '';
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === '-') {
+      const sep = document.createElement('div');
+      sep.style.cssText = 'width:10px;display:flex;align-items:center;justify-content:center;color:var(--muted2);font-weight:900;font-size:1.2rem;';
+      sep.textContent = '-';
+      boxes.appendChild(sep);
+    } else {
+      const b = document.createElement('div');
+      b.className = 'spell-box' + (i === 0 ? ' cursor' : '');
+      b.dataset.idx = i;
+      boxes.appendChild(b);
+    }
+  }
+  const inp = document.getElementById('qSpellInput');
+  inp.value = '';
+  inp.placeholder = word.length + ' letters';
+  const fb = document.getElementById('qSpellFeedback');
+  fb.style.display = 'none';
+  fb.className = 'quiz-feedback';
+  document.getElementById('qSpellRevealBtn').style.display = 'block';
+  updateQSpellBoxes('');
+}
+
+function updateQSpellBoxes(typed) {
+  const entry = S.quiz.questions[S.quiz.qIdx].entry;
+  const word = entry.word.toLowerCase().replace(/-/g, '');
+  const t = typed.toLowerCase();
+  const allBoxes = document.querySelectorAll('#qSpellBoxes .spell-box');
+  allBoxes.forEach((b, i) => {
+    b.className = 'spell-box';
+    if (i < t.length) { b.textContent = t[i]; b.classList.add('filled'); }
+    else { b.textContent = ''; if (i === t.length) b.classList.add('cursor'); }
+  });
+}
+
+function checkQuizSpelling() {
+  const entry = S.quiz.questions[S.quiz.qIdx].entry;
+  const word = entry.word.toLowerCase();
+  const typed = document.getElementById('qSpellInput').value.trim().toLowerCase();
+  const fb = document.getElementById('qSpellFeedback');
+  if (!typed) { toast('Type the word first!', ''); return; }
+
+  const allBoxes = document.querySelectorAll('#qSpellBoxes .spell-box');
+  const wordClean = word.replace(/-/g, '');
+  const typedClean = typed.replace(/-/g, '');
+
+  if (typedClean === wordClean) {
+    S.quiz.spellScore++;
+    allBoxes.forEach(b => { b.className = 'spell-box correct'; });
+    fb.className = 'quiz-feedback correct-fb';
+    fb.textContent = '✓ Perfect spelling!';
+    toast('✓ Spelled correctly!', 'good');
+  } else {
+    const wordArr = wordClean.split('');
+    allBoxes.forEach((b, i) => {
+      b.className = 'spell-box';
+      const ch = typedClean[i] || '';
+      b.textContent = ch || wordArr[i];
+      if (!ch) b.classList.add('wrong');
+      else if (ch === wordArr[i]) b.classList.add('correct');
+      else { b.classList.add('wrong'); b.textContent = ch; }
+    });
+    fb.className = 'quiz-feedback wrong-fb';
+    fb.textContent = '✗ The word is "' + entry.word + '".';
+  }
+  fb.style.display = 'block';
+  document.getElementById('qSpellRevealBtn').style.display = 'none';
+  const isLast = S.quiz.qIdx === S.quiz.questions.length - 1;
+  const nextBtn = document.getElementById('quizNextBtn');
+  nextBtn.textContent = isLast ? 'See Results →' : 'Next Word →';
+  nextBtn.style.display = 'inline-block';
+}
+
+function checkAnswer(chosen, correct) {
+  if (S.quiz.answered) return;
+  S.quiz.answered = true;
+
+  const btns = document.querySelectorAll('.choice-btn');
+  btns.forEach(btn => {
+    btn.disabled = true;
+    if (btn.dataset.word === correct) btn.classList.add('correct');
+    else if (btn.dataset.word === chosen && chosen !== correct) btn.classList.add('wrong');
+  });
+
+  const fb = document.getElementById('quizFeedback');
+  if (chosen === correct) {
+    S.quiz.score++;
+    fb.className = 'quiz-feedback correct-fb';
+    fb.textContent = '✓ Correct! "' + correct + '" is right.';
+  } else {
+    fb.className = 'quiz-feedback wrong-fb';
+    fb.textContent = '✗ The answer is "' + correct + '".';
+  }
+  fb.style.display = 'block';
+
+  const nextBtn = document.getElementById('quizNextBtn');
+  nextBtn.textContent = 'Next: Spell It →';
+  nextBtn.style.display = 'inline-block';
+}
+
+function quizNext() {
+  const q = S.quiz;
+  const total = q.questions.length;
+  if (q.phase === 1) {
+    q.phase = 2;
+    renderQuestion();
+  } else if (q.qIdx < total - 1) {
+    q.qIdx++;
+    q.phase = 1;
+    renderQuestion();
+  } else {
+    const mcPct = Math.round((q.score / total) * 100);
+    const spPct = Math.round((q.spellScore / total) * 100);
+    const combined = q.score + q.spellScore;
+    const combMax = total * 2;
+    const emoji = mcPct >= 80 ? '🎉' : mcPct >= 60 ? '👍' : '📚';
+    document.getElementById('quizQuestionArea').style.display = 'none';
+    document.getElementById('quizResult').style.display = 'block';
+    document.getElementById('quizProgressFill').style.width = '100%';
+    document.getElementById('quizResultScore').textContent = emoji + ' ' + combined + ' / ' + combMax;
+    document.getElementById('quizResultLabel').textContent =
+      '📖 Choose: ' + q.score + '/' + total + '  ·  ✏️ Spell: ' + q.spellScore + '/' + total + (
+        mcPct >= 80 && spPct >= 80 ? '  —  Outstanding!' :
+        mcPct >= 60 ? '  —  Good work! Review the ones you missed.' :
+        '  —  Keep studying — you\'ll get there!'
+      );
+    S.quizDone[S.gIdx] = { score: combined, total: combMax };
+    render();
+  }
+}
+
+function renderSpell() {
+  const entry = GROUPS[S.gIdx][S.wIdx];
+  const word = entry.word.toLowerCase();
+
+  document.getElementById('spellSentence').innerHTML = highlightWord(entry.ex_en, entry.word)
+    .replace(/<span class="hl">([^<]+)<\/span>/gi, '<span class="hl">_____</span>');
+
+  const boxes = document.getElementById('spellBoxes');
+  boxes.innerHTML = '';
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === '-') {
+      const sep = document.createElement('div');
+      sep.style.cssText = 'width:10px;display:flex;align-items:center;justify-content:center;color:var(--muted2);font-weight:900;font-size:1.2rem;';
+      sep.textContent = '-';
+      boxes.appendChild(sep);
+    } else {
+      const b = document.createElement('div');
+      b.className = 'spell-box' + (i === 0 ? ' cursor' : '');
+      b.dataset.idx = i;
+      boxes.appendChild(b);
+    }
+  }
+
+  const inp = document.getElementById('spellInput');
+  inp.value = '';
+  inp.placeholder = word.length + ' letters';
+  document.getElementById('spellFeedback').style.display = 'none';
+  document.getElementById('spellFeedback').className = 'spell-feedback';
+  document.getElementById('spellRevealBtn').style.display = 'block';
+  updateBoxes('');
+}
+
+function updateBoxes(typed) {
+  const entry = GROUPS[S.gIdx][S.wIdx];
+  const word = entry.word.toLowerCase().replace(/-/g, '');
+  const t = typed.toLowerCase();
+  const allBoxes = document.querySelectorAll('.spell-box');
+
+  allBoxes.forEach((b, i) => {
+    b.className = 'spell-box';
+    if (i < t.length) {
+      b.textContent = t[i];
+      b.classList.add('filled');
+    } else {
+      b.textContent = '';
+      if (i === t.length) b.classList.add('cursor');
+    }
+  });
+}
+
+function checkSpelling() {
+  const entry = GROUPS[S.gIdx][S.wIdx];
+  const word = entry.word.toLowerCase();
+  const typed = document.getElementById('spellInput').value.trim().toLowerCase();
+  const fb = document.getElementById('spellFeedback');
+
+  if (!typed) { toast('Type the word first!', ''); return; }
+
+  const allBoxes = document.querySelectorAll('.spell-box');
+  const wordClean = word.replace(/-/g, '');
+  const typedClean = typed.replace(/-/g, '');
+
+  if (typedClean === wordClean) {
+    allBoxes.forEach(b => { b.className = 'spell-box correct'; b.textContent = b.textContent || ''; });
+    fb.className = 'spell-feedback ok';
+    fb.textContent = '✓ Correct! You spelled "' + entry.word + '" perfectly.';
+    toast('✓ Spelled correctly!', 'good');
+  } else {
+    const wordArr = wordClean.split('');
+    allBoxes.forEach((b, i) => {
+      b.className = 'spell-box';
+      const ch = typedClean[i] || '';
+      b.textContent = ch || wordArr[i];
+      if (!ch)          b.classList.add('wrong');
+      else if (ch === wordArr[i]) b.classList.add('correct');
+      else              { b.classList.add('wrong'); b.textContent = ch; }
+    });
+    fb.className = 'spell-feedback err';
+    fb.textContent = '✗ Not quite. The word is "' + entry.word + '".';
+  }
+  fb.style.display = 'block';
+  document.getElementById('spellRevealBtn').style.display = 'none';
+}
+
+document.getElementById('prevGroupBtn').addEventListener('click', () => goGroup(S.gIdx - 1));
+document.getElementById('nextGroupBtn').addEventListener('click', () => goGroup(S.gIdx + 1));
+document.getElementById('prevWordBtn').addEventListener('click', () => goWord(S.wIdx - 1));
+document.getElementById('nextWordBtn').addEventListener('click', () => goWord(S.wIdx + 1));
+document.getElementById('starBtn').addEventListener('click', toggleStar);
+document.getElementById('speakBtn').addEventListener('click', () => speak(GROUPS[S.gIdx][S.wIdx].word));
+document.getElementById('speakBtn2').addEventListener('click', () => speak(GROUPS[S.gIdx][S.wIdx].word));
+document.getElementById('tabNovel').addEventListener('click', () => { S.sentTab = 0; render(); });
+document.getElementById('tabAI').addEventListener('click',   () => { S.sentTab = 1; render(); });
+document.getElementById('tabSpell').addEventListener('click', () => { S.sentTab = 2; render(); });
+document.getElementById('mySentSaveBtn').addEventListener('click', addSentence);
+document.getElementById('mySentInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') { e.preventDefault(); addSentence(); }
+});
+document.getElementById('sqStartBtn').addEventListener('click', startStarredQuiz);
+document.getElementById('sqNextBtn').addEventListener('click', sqNext);
+document.getElementById('sqRetryBtn').addEventListener('click', startStarredQuiz);
+document.getElementById('sqResetBtn').addEventListener('click', renderStarredQuizStart);
+document.getElementById('quizHeader').addEventListener('click', () => {
+  const body = document.getElementById('quizBody');
+  const icon = document.getElementById('quizToggleIcon');
+  const open = body.classList.toggle('open');
+  icon.classList.toggle('open', open);
+});
+document.getElementById('quizStartBtn').addEventListener('click', startQuiz);
+document.getElementById('quizSkipBtn').addEventListener('click', () => {
+  document.getElementById('quizBody').classList.remove('open');
+  document.getElementById('quizToggleIcon').classList.remove('open');
+});
+document.getElementById('qSpellInput').addEventListener('input', e => {
+  updateQSpellBoxes(e.target.value);
+});
+document.getElementById('qSpellInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') { e.preventDefault(); checkQuizSpelling(); }
+});
+document.getElementById('qSpellCheckBtn').addEventListener('click', checkQuizSpelling);
+document.getElementById('qSpellRevealBtn').addEventListener('click', () => {
+  const entry = S.quiz.questions[S.quiz.qIdx].entry;
+  const fb = document.getElementById('qSpellFeedback');
+  fb.className = 'quiz-feedback wrong-fb';
+  fb.textContent = 'The word is "' + entry.word + '". Try again next time!';
+  fb.style.display = 'block';
+  document.getElementById('qSpellRevealBtn').style.display = 'none';
+  const allBoxes = document.querySelectorAll('#qSpellBoxes .spell-box');
+  const wordClean = entry.word.toLowerCase().replace(/-/g,'');
+  allBoxes.forEach((b, i) => { b.className = 'spell-box wrong'; b.textContent = wordClean[i] || ''; });
+  const isLast = S.quiz.qIdx === S.quiz.questions.length - 1;
+  const nextBtn = document.getElementById('quizNextBtn');
+  nextBtn.textContent = isLast ? 'See Results →' : 'Next Word →';
+  nextBtn.style.display = 'inline-block';
+});
+document.getElementById('quizNextBtn').addEventListener('click', quizNext);
+document.getElementById('quizRetryBtn').addEventListener('click', () => {
+  document.getElementById('quizResult').style.display = 'none';
+  document.getElementById('quizStartArea').style.display = 'block';
+});
+document.getElementById('quizCloseBtn').addEventListener('click', () => {
+  document.getElementById('quizBody').classList.remove('open');
+  document.getElementById('quizToggleIcon').classList.remove('open');
+});
+document.getElementById('starredHeader').addEventListener('click', () => {
+  const body = document.getElementById('starredBody');
+  const icon = document.getElementById('starredToggleIcon');
+  const open = body.classList.toggle('open');
+  icon.classList.toggle('open', open);
+});
+document.getElementById('starredToggleBtn').addEventListener('click', () => {
+  const body = document.getElementById('starredBody');
+  const icon = document.getElementById('starredToggleIcon');
+  body.classList.add('open');
+  icon.classList.add('open');
+  document.getElementById('starredSection').scrollIntoView({ behavior: 'smooth' });
+});
+document.getElementById('spellInput').addEventListener('input', e => {
+  updateBoxes(e.target.value);
+});
+document.getElementById('spellInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') { e.preventDefault(); checkSpelling(); }
+});
+document.getElementById('spellCheckBtn').addEventListener('click', checkSpelling);
+document.getElementById('spellRevealBtn').addEventListener('click', () => {
+  const word = GROUPS[S.gIdx][S.wIdx].word;
+  const fb = document.getElementById('spellFeedback');
+  fb.className = 'spell-feedback err';
+  fb.textContent = 'The word is "' + word + '". Try again next time!';
+  fb.style.display = 'block';
+  document.getElementById('spellRevealBtn').style.display = 'none';
+  const allBoxes = document.querySelectorAll('.spell-box');
+  const wordClean = word.toLowerCase().replace(/-/g,'');
+  allBoxes.forEach((b, i) => {
+    b.className = 'spell-box wrong';
+    b.textContent = wordClean[i] || '';
+  });
+});
+document.addEventListener('keydown', e => {
+  const tag = document.activeElement.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+  switch(e.key) {
+    case 'ArrowRight': e.preventDefault(); goWord(S.wIdx + 1); break;
+    case 'ArrowLeft':  e.preventDefault(); goWord(S.wIdx - 1); break;
+    case 'ArrowUp':    e.preventDefault(); goGroup(S.gIdx - 1); break;
+    case 'ArrowDown':  e.preventDefault(); goGroup(S.gIdx + 1); break;
+    case 's': case 'S': toggleStar(); break;
+    case 'p': case 'P': speak(GROUPS[S.gIdx][S.wIdx].word); break;
+    case '1': S.sentTab = 0; render(); break;
+    case '2': S.sentTab = 1; render(); break;
+  }
+});
+
+// ── Print functions ───────────────────────────────────────────
+function openPrintModal() {
+  const grp = GROUPS[S.gIdx];
+  document.getElementById('printGroupLabel').textContent = 'Group ' + (S.gIdx + 1);
+  document.getElementById('printGroupCount').textContent = grp.length;
+  document.getElementById('printAllCount').textContent = VOCAB.length;
+  document.getElementById('printModal').style.display = 'block';
+}
+
+function closePrintModal() {
+  document.getElementById('printModal').style.display = 'none';
+}
+
+function doPrint() {
+  const scope = document.querySelector('input[name="printScope"]:checked').value;
+  const words = scope === 'group' ? GROUPS[S.gIdx] : VOCAB;
+  const groupLabel = scope === 'group' ? 'Group ' + (S.gIdx + 1) : 'All Words';
+
+  const rows = words.map((entry, i) => {
+    const sa = SYNAN[entry.word] || { syn: [], ant: [] };
+    const synText = sa.syn.length ? sa.syn.join(', ') : '—';
+    const antText = sa.ant.length ? sa.ant.join(', ') : '—';
+    return `
+      <div class="pe">
+        <div class="pe-head">
+          <span class="pe-num">${i + 1}</span>
+          <span class="pe-word">${entry.word}</span>
+          <span class="pe-pron">${entry.pron}</span>
+          <span class="pe-ch">${entry.chapter}</span>
+        </div>
+        <div class="pe-def">${entry.def_en}</div>
+        <div class="pe-def zh">${entry.def_zh}</div>
+        <div class="pe-synan">
+          <span class="pe-label syn">SYN</span>${synText}
+          &nbsp;&nbsp;<span class="pe-label ant">ANT</span>${antText}
+        </div>
+        <div class="pe-sent">
+          <span class="pe-sent-label">📖</span>
+          <span>${entry.quote_en}</span>
+        </div>
+        <div class="pe-sent zh">
+          <span class="pe-sent-label"></span>
+          <span>${entry.quote_zh}</span>
+        </div>
+        <div class="pe-sent ex">
+          <span class="pe-sent-label">💡</span>
+          <span>${entry.ex_en}</span>
+        </div>
+        <div class="pe-sent zh">
+          <span class="pe-sent-label"></span>
+          <span>${entry.ex_zh}</span>
+        </div>
+      </div>`;
+  }).join('');
+
+  const html = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>${BOOK_CONFIG.bookName} — Vocabulary (${groupLabel})</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Georgia, 'Songti SC', 'SimSun', serif;
+    font-size: 9.5pt;
+    color: #111;
+    background: white;
+    padding: 14mm 12mm;
+  }
+  h1 {
+    font-size: 15pt;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3pt;
+    letter-spacing: .02em;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 9pt;
+    color: #555;
+    margin-bottom: 12pt;
+    padding-bottom: 8pt;
+    border-bottom: 1.5pt solid #333;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 14pt;
+  }
+  .pe {
+    border-bottom: .5pt solid #ccc;
+    padding: 7pt 0 6pt;
+    break-inside: avoid;
+  }
+  .pe-head {
+    display: flex;
+    align-items: baseline;
+    gap: 5pt;
+    margin-bottom: 2pt;
+    flex-wrap: wrap;
+  }
+  .pe-num {
+    font-size: 7.5pt;
+    color: #888;
+    min-width: 16pt;
+  }
+  .pe-word {
+    font-size: 12pt;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: .01em;
+  }
+  .pe-pron {
+    font-size: 8pt;
+    color: #555;
+    font-style: italic;
+  }
+  .pe-ch {
+    font-size: 7.5pt;
+    color: #888;
+    margin-left: auto;
+  }
+  .pe-def {
+    font-size: 8.5pt;
+    color: #222;
+    margin-bottom: 1.5pt;
+    line-height: 1.4;
+  }
+  .pe-def.zh {
+    color: #444;
+    font-size: 8pt;
+    margin-bottom: 3pt;
+  }
+  .pe-synan {
+    font-size: 8pt;
+    margin-bottom: 3.5pt;
+    color: #333;
+    line-height: 1.5;
+  }
+  .pe-label {
+    font-size: 7pt;
+    font-weight: 700;
+    padding: 1pt 4pt;
+    border-radius: 3pt;
+    margin-right: 3pt;
+    letter-spacing: .04em;
+  }
+  .pe-label.syn {
+    background: #e6faf4;
+    color: #1a7a55;
+    border: .5pt solid #aadec8;
+  }
+  .pe-label.ant {
+    background: #fef0f2;
+    color: #a02040;
+    border: .5pt solid #f0b0bc;
+  }
+  .pe-sent {
+    font-size: 8pt;
+    line-height: 1.45;
+    color: #333;
+    display: flex;
+    gap: 4pt;
+    margin-top: 1.5pt;
+  }
+  .pe-sent.ex { color: #1a4a70; }
+  .pe-sent.zh { color: #555; margin-top: 1pt; }
+  .pe-sent-label {
+    font-size: 8pt;
+    min-width: 12pt;
+    flex-shrink: 0;
+  }
+  .footer {
+    position: running(footer);
+    font-size: 7.5pt;
+    color: #888;
+    text-align: center;
+  }
+  @page {
+    margin: 14mm 12mm 18mm;
+    @bottom-center { content: element(footer); }
+  }
+  @media print {
+    .footer { display: block; }
+  }
+</style>
+</head>
+<body>
+<h1>${BOOK_CONFIG.bookName} Vocabulary</h1>
+<div class="subtitle">${BOOK_CONFIG.author} &nbsp;·&nbsp; ${groupLabel} &nbsp;·&nbsp; ${words.length} words &nbsp;·&nbsp; 📖 Novel sentence &nbsp; 💡 AI example sentence</div>
+<div class="footer">${BOOK_CONFIG.bookName} — ${BOOK_CONFIG.author} &nbsp;|&nbsp; ${groupLabel}</div>
+<div class="grid">${rows}</div>
+</body>
+</html>`;
+
+  closePrintModal();
+  const win = window.open('', '_blank');
+  win.document.write(html);
+  win.document.close();
+  win.focus();
+  setTimeout(() => win.print(), 400);
+}
+
+// Initialize
+if (VOCAB.length > 1) {
+  render();
+} else {
+  document.getElementById('wordDisplay').textContent = 'Add Data';
+  document.getElementById('defEn').textContent = 'Please paste your 100 vocabulary words into the VOCAB array.';
+}
+</script>
+
+<!-- Print Modal -->
+<div id="printModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.75); z-index:9999; overflow-y:auto; padding:20px;">
+  <div style="max-width:520px; margin:0 auto; background:var(--panel); border:1px solid var(--s35); border-radius:16px; padding:28px 24px;">
+    <h2 style="font-family:Georgia,serif; color:var(--good); margin-bottom:6px; font-size:1.3rem;">🖨️ Print Vocabulary</h2>
+    <p style="color:var(--muted); font-size:.85rem; margin-bottom:20px;">Each entry includes word, pronunciation, definitions, synonyms &amp; antonyms, and both sentences.</p>
+    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:22px;">
+      <label style="display:flex; align-items:center; gap:10px; cursor:pointer; color:var(--text); font-weight:600; font-size:.95rem;">
+        <input type="radio" name="printScope" value="group" checked style="accent-color:var(--good); width:16px; height:16px;">
+        Current group only (<span id="printGroupLabel">Group 1</span> · <span id="printGroupCount">10</span> words)
+      </label>
+      <label style="display:flex; align-items:center; gap:10px; cursor:pointer; color:var(--text); font-weight:600; font-size:.95rem;">
+        <input type="radio" name="printScope" value="all" style="accent-color:var(--good); width:16px; height:16px;">
+        All words (<span id="printAllCount">100</span> words)
+      </label>
+    </div>
+    <div style="display:flex; gap:10px;">
+      <button onclick="doPrint()" style="flex:1; background:var(--good); color:#06131a; border:none; border-radius:10px; padding:11px; font-weight:800; font-size:.95rem; cursor:pointer;">Print / Save PDF</button>
+      <button onclick="closePrintModal()" style="flex:1; background:var(--panel2); color:var(--muted); border:1px solid var(--s35); border-radius:10px; padding:11px; font-weight:700; font-size:.95rem; cursor:pointer;">Cancel</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
